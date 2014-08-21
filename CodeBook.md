@@ -32,18 +32,18 @@ the desired averages by subject/activity.
 
 CodeBook for clean data Tidy Data Set
 -------------------------------------
-'''
-Variable name         position   Description                   DataType   Values
-----------------      --------   ------------------------      --------   --------------
-Subject                   1      Subject member performing     Int        1 through 30
-                                 test/train activity
-Activity                  2      Activity performed by 
-                                 Subject                       Char       WALKING
-                                                                          WALKING_UPSTAIRS
-                                                                          WALKING_DOWNSTAIRS
-                                                                          SITTING
-                                                                          STANDING
-                                                                          LAYING
+
+Variable name   	position	Description             	DataType	Values
+----------------	--------	------------------------	--------	--------------
+Subject         	  1      	Subject member performing	Int     	1 through 30
+                                 	test/train activity      	
+Activity        	  2      	Activity performed by 
+                                 	Subject                  	Char    	WALKING
+                                                                          		WALKING_UPSTAIRS
+                                                                          		WALKING_DOWNSTAIRS
+                                                                          		SITTING
+                                                                          		STANDING
+                                                                          		LAYING
      --------------------------- Measurement data ---------------------------
 tbodyaccmeanx             3                                    Int
 tbodyaccmeany             4                                    Int
