@@ -143,7 +143,8 @@ colnames(tidyData) <- c("Subject","Activity",featureLables[includeCols])
 ## step 7
 ## writing data files
 message("7. writing datasets")
-write.table(tidyData,"tidyData.csv",sep=",",row.names=F,col.names=T,quote=F)
+write.table(tidyData,"projData.txt",sep=",",row.names=F,col.names=T,quote=F)
+write.table(tidyData,"tidyData.txt",sep=",",row.names=F,col.names=T,quote=F)
 
 message("---- Eof of process ---")
 
