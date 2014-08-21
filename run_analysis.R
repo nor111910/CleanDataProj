@@ -5,22 +5,40 @@
 # Purpose:
 # This script runs analysis on UCI HAR Dataset.
 #
+#
+# process steps:
+# 1. check if data set exists
+#    if not download and unzip the data set
+# 2. set up feature and activity lables
+#    A. read featrue file
+#    B. extract mean() and std() columns
+#    C. remove punctuation from feature lables
+#    D. convert feature lables to lower case
+#    E. read activity lables
+# 3. create data.frame of X and Y test data
+# 4. create data.frame of X and Y train data
+# 5. combine test data and train data into project data data.frame
+# 6. compute averages for each subject/activity measurement values
+# 7. write out the tidy dataset
+#
+#
 #############################################
 # libraries
+######################
 
 
 ######################
 # variables
 ######################
-activityFile   <- testDataPath   <- "UCI HAR Dataset/activity_labels.txt"
-featuresFile   <- testDataPath   <- "UCI HAR Dataset/features.txt"
+activityFile   <- "UCI HAR Dataset/activity_labels.txt"
+featuresFile   <- "UCI HAR Dataset/features.txt"
 
-#testDataPath   <- "UCI HAR Dataset/test"
+#testDataPath  <- "UCI HAR Dataset/test"
 testXdataFile  <- "UCI HAR Dataset/test/X_test.txt"
 testYdataFile  <- "UCI HAR Dataset/test/y_test.txt"
 testSubjFile   <- "UCI HAR Dataset/test/subject_test.txt"
 
-#trainDataPath  <- "UCI HAR Dataset/train"
+#trainDataPath <- "UCI HAR Dataset/train"
 trainXdataFile <- "UCI HAR Dataset/train/X_train.txt"
 trainYdataFile <- "UCI HAR Dataset/train/y_train.txt"
 trainSubjFile  <- "UCI HAR Dataset/train/subject_train.txt"
@@ -31,22 +49,6 @@ trainSubjFile  <- "UCI HAR Dataset/train/subject_train.txt"
 ### Main processing section
 ##################################
 
-##
-## process steps:
-## 1. check if data set exists
-##    if not download and unzip the data set
-## 2. set up feature and activity lables
-##    A. read featrue file
-##    B. extract mean() and std() columns
-##    C. remove punctuation from feature lables
-##    D. convert feature lables to lower case
-##    E. read activity lables
-## 3. create data.frame of X and Y test data
-## 4. create data.frame of X and Y train data
-## 5. combine test data and train data into project data data.frame
-## 6. compute averages for each subject/activity measurement values
-## 7. write out the tidy dataset
-##
 
 
 ## Step 1
@@ -127,16 +129,17 @@ colnames(trainData) <- c("Subject","Activity",featureLables[includeCols]) # assi
 ## step 5
 ## combining data
 message("5. combining test and train data")
-projData <- rbind(testData,trainData)
+projData           <- rbind(testData,trainData)
 colnames(projData) <- c("Subject","Activity",featureLables[includeCols])
 
 
 ## step 6
 ## compute avgs for subject,activity
 message("6. Compute subject,activity avgs")
-subject=projData$Subject
-activity=projData$Activity
-nc <- ncol(projData)
+subject  = projData$Subject
+activity = projData$Activity
+nc       <- ncol(projData)
+
 tidyData=aggregate( projData[,3:nc] ,list(subject,activity) , FUN=mean )
 colnames(tidyData) <- c("Subject","Activity",featureLables[includeCols])
 
