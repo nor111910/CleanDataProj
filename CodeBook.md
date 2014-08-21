@@ -32,7 +32,7 @@ the desired averages by subject/activity.
 
 CodeBook for clean data Tidy Data Set
 -------------------------------------
-
+'''
 Variable name         position   Description                   DataType   Values
 ----------------      --------   ------------------------      --------   --------------
 Subject                   1      Subject member performing     Int        1 through 30
@@ -111,3 +111,4 @@ fbodybodygyromagmean     65                                    Int
 fbodybodygyromagstd      66                                    Int
 fbodybodygyrojerkmagmean 67                                    Int
 fbodybodygyrojerkmagstd  68                                    Int
+'''
