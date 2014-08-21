@@ -34,11 +34,11 @@ CodeBook for clean data Tidy Data Set
 -------------------------------------
 ```
 
-Variable name   	position    Description                DataType   Values
--------------		----------  -------------------------  --------   ------
-Subject         	  1         Subject member performing  Int        1 through 30
+Variable name           position    Description                DataType   Values
+-------------	        ----------  -------------------------  --------   ------
+Subject                   1         Subject member performing  Int        1 through 30
                                     test/train activity        
-Activity        	  2         Activity performed by 
+Activity                  2         Activity performed by 
                                     Subject                    Char       WALKING
                                                                           WALKING_UPSTAIRS
                                                                           WALKING_DOWNSTAIRS
