@@ -31,19 +31,19 @@ tidyData.txt   - tidy dataset (comma separated fields (csv) with headers)
 
 
 How to run analysis script:
-============================================
-1. download the analysis script from github site
-2. put into your working directory
-3. start R
-4. setwd() to your working directory
-5. run: source("run_analysis.R")
-   ** the script follows the process steps below
-   the file tidyData.txt will be created in the working directory
+----------------------------
+  1. download the analysis script from github site
+  2. put into your working directory
+  3. start R
+  4. setwd() to your working directory
+  5. run: source("run_analysis.R")
+     ** the script follows the process steps below
+     the file tidyData.txt will be created in the working directory
 
 
 
 Process
-============================================
+===================
 The process used on the dataset to produce the tidy
 dataset is as follows:
 
