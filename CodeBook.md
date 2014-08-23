@@ -1,5 +1,5 @@
 CodeBook for Cean Data Tidy data project
-----------------------------------------
+========================================
 This codeBook is for the resulting dataset for the Clean Data tidy data project.  
 The tidy dataset is in a txt file formated as csv (comma seperated).
 
@@ -27,6 +27,16 @@ After review, I chose columns with mean() and std() to be the measurements to re
 the desired averages by subject/activity.
 
 
+Transformations
+-----------------------------------------
+The data consists of 2 groups, test and train.  Each are made up from subjects and activities.
+Both datasets are put to gether in the same way.  The Activities are changed from numbers to 
+lable values.  Both subject and activity are combined to the measurement data by using cbind.
+An intermediate data set for test and train are created that consist of the subject and activity
+and only mean() and std() measurements.  These datasets are then combined using rbind producing 
+the project dataset.  Column names are modified to remove punctuations and convert charaters to
+lower case.  The data is then aggregated and averaged for each subject/activity to produce the 
+tidy dataset.
 
 
 
