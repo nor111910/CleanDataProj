@@ -40,7 +40,7 @@ tidy dataset.
 
 
 
-CodeBook for clean data Tidy Data Set
+Clean Data Tidy DataSet
 -------------------------------------
 ```
 
