@@ -23,11 +23,11 @@ characters lowercase.
 
 The project consists of the following files:
 --------------------------------------------
-README.md      - information about the project and files
-run_analysis.R - analysis script to create the tidy dataset
-CodeBook.md    - the codebook for the tidy dataset
-projData.tst   - mergered project data (comma separated fields(csv) with headers)
-tidyData.txt   - tidy dataset (comma separated fields (csv) with headers)
+  1. README.md      - information about the project and files
+  2. run_analysis.R - analysis script to create the tidy dataset
+  3. CodeBook.md    - the codebook for the tidy dataset
+  4. projData.tst   - mergered project data (comma separated fields(csv) with headers)
+  5. tidyData.txt   - tidy dataset (comma separated fields (csv) with headers)
 
 
 How to run analysis script:
